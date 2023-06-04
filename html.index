@@ -1,13 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background-image: url("https://drive.google.com/uc?export=view&id=1aGfwJb2VO41z5yS0yJJgR7elIJWVBidX");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Add additional styles here */
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media button {
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .documents {
+            margin-top: 20px;
+        }
+
+        .documents button {
+            background-color: #008CBA;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            background-image: url("https://drive.google.com/uc?export=view&id=19f8EGeNGlXImTrsvS0ah8YR5ZSggehYQ");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+      .skills {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+        }
+
+        .skill .circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .skill .html {
+            background-color: #e34c26;
+        }
+
+        .skill .css {
+            background-color: #2965f1;
+        }
+
+        .skill .javascript {
+            background-color: #f0db4f;
+        }
+
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .education-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .education-box {
+            width: calc(33.33% - 20px);
+            background-color: #008CBA;
+            color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .experience-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .experience-box {
+            width: calc(33.33% - 20px);
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+      .section {
+            margin-top: 40px;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        .section .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .section .timeline .period {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section .timeline .period .years {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .section .timeline .period .description {
+            text-align: center;
+        }
+      .timeline {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .period {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .years {
+            background-color: #008CBA;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .line {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background-color: #ffffff;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <h1>Welcome to My Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -18,42 +230,91 @@
         </nav>
     </header>
 
-    <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-    </section>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <div class="profile-picture"></div>
+            <h3>WALTERMITTY</h3>
+            <p>Email: waltermittybecker5@gmail.com</p>
+            <p>Date of Birth: 2002</p>
+            <p>Welcome to my portfolio website. Feel free to explore!</p>
+          <section id="skill" class="section">
+           <h3>Skills</h3>
+           <div class="skills">
+                <div class="skill">
+                    <div class="circle html">90%</div>
+                    <p>HTML</p>
+                </div>
+                <div class="skill">
+                    <div class="circle css">85%</div>
+                    <p>CSS</p>
+                </div>
+                <div class="skill">
+                    <div class="circle javascript">75%</div>
+                    <p>JavaScript</p>
+                </div>
+                <!-- Add more skills here -->
+             </section>
+            <section id="Education" class="section">
+             
+            <h2>Education and Experience</h2>
+            <div class="timeline">
+                <div class="period">
+                    <div class="years">2009-2017</div>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum condimentum enim, ut lacinia ligula fringilla sed. Fusce non massa at nibh pulvinar viverra. In gravida tortor lectus, a ullamcorper lorem dapibus id.</div>
+                    <div class="line"></div>
+                </div>
+                <div class="period">
+                    <div class="years">2018-2022</div>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum condimentum enim, ut lacinia ligula fringilla sed. Fusce non massa at nibh pulvinar viverra. In gravida tortor lectus, a ullamcorper lorem dapibus id.</div>
+                    <div class="line"></div>
+                </div>
+                <div class="period">
+                    <div class="years">2022-Present</div>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum condimentum enim, ut lacinia ligula fringilla sed. Fusce non massa at nibh pulvinar viverra. In gravida tortor lectus, a ullamcorper lorem dapibus id.</div>
+                </div>
+            </div>
+        </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet gravida mauris, a vulputate elit. Nullam rhoncus ligula nec mi facilisis, vitae tempus libero consectetur.</p>
-    </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>Welcome to my portfolio website! I am a dedicated and passionate student pursuing a degree in Computer Science, eager to showcase my skills and achievements in this ever-evolving field. Throughout my academic journey, I have gained a strong foundation in programming languages, algorithms, and data structures, allowing me to tackle complex problems with creativity and precision. Additionally, I have actively engaged in various projects, both individually and collaboratively, where I have honed my software development and problem-solving abilities. My portfolio highlights my diverse range of projects, from web development and mobile applications to machine learning and artificial intelligence. I strive to combine technical expertise with a user-centric approach, ensuring that the solutions I create not only meet the functional requirements but also deliver an exceptional user experience. With a strong commitment to continuous learning and staying updated with the latest industry trends, I am excited to contribute my skills to real-world challenges and make a meaningful impact in the world of technology.</p>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet gravida mauris, a vulputate elit.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet gravida mauris, a vulputate elit.</p>
-        </div>
-    </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-container">
+                <div class="project-box">
+                    <h3 class="project-title">Project 1: Web Development - E-commerce Website</h3>
+                    <p class="project-description">As a Computer Science student, one of the projects I undertook was the development of an e-commerce website. This project involved designing and implementing a user-friendly and secure platform that enabled customers to browse and purchase products online. I utilized HTML, CSS, and JavaScript to create the front-end interface, incorporating responsive design principles for optimal viewing on various devices. On the back-end, I leveraged a combination of PHP and a relational database management system like MySQL to handle product catalog management, user authentication, and secure transaction processing. Additionally, I integrated popular payment gateways and implemented robust security measures to protect user data. Through this project, I enhanced my web development skills and gained hands-on experience in building dynamic and scalable websites.</p>
+                </div>
+                <div class="project-box">
+                    <h3 class="project-title">Project 2: Mobile Application - Task Manager</h3>
+                    <p class="project-description">Another noteworthy project I worked on was the development of a mobile application called "Task Manager." This project aimed to provide users with a convenient way to organize and track their tasks efficiently. Using frameworks like React Native and Expo, I built a cross-platform mobile app that allowed users to create, categorize, and prioritize tasks. The application featured intuitive user interfaces, push notifications for reminders, and synchronization capabilities with cloud storage. To ensure data security, I implemented user authentication and utilized local device storage or cloud-based solutions for storing task data. This project sharpened my skills in mobile app development, user experience design, and integration with external services.</p>
+                </div>
+                <div class="project-box">
+                    <h3 class="project-title">Project 3: Machine Learning - Sentiment Analysis</h3>
+                    <p class="project-description">In the realm of machine learning, I undertook a project focused on sentiment analysis. The goal was to develop a model capable of analyzing and classifying text sentiments, such as positive, negative, or neutral. I employed Python and popular libraries like TensorFlow and Natural Language Processing Toolkit (NLTK) to preprocess and transform textual data into numerical representations. Leveraging algorithms like Support Vector Machines (SVM) or Recurrent Neural Networks (RNN), I trained the model on a labeled dataset to recognize sentiment patterns. To assess its accuracy, I utilized evaluation metrics such as precision, recall, and F1 score. This project deepened my understanding of machine learning concepts, text processing techniques, and model evaluation, enabling me to apply sentiment analysis in various domains like social media monitoring or customer feedback analysis.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="submit_form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea><br>
-            <input type="submit" value="Submit">
-        </form>
-    </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="social-media">
+                <button>LinkedIn</button>
+                <button>GitHub</button>
+                <button>Twitter</button>
+            </div>
+            <div class="documents">
+                <button>Resume</button>
+                <button>Portfolio</button>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+        <p>&copy; 2023 Walter Mitty. All rights reserved.Produced by Monstercity Production</p>
     </footer>
 </body>
 </html>
